@@ -44,7 +44,7 @@
 </svelte:head>
 
 <h1>Blog Posts</h1>
-<hr />
+<hr class="border-0 bg-black text-black h-px" />
 
 <div class="grid">
   <ul class="item-a">

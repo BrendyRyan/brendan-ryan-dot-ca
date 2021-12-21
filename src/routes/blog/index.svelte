@@ -3,7 +3,7 @@
     const tagFilter = page.query.get('tag') || '';
 
     //get all blog posts, map over the list and return the metadata for each one.
-    const posts = import.meta.globEager('../../../src/posts/*.md');
+    const posts = import.meta.globEager('../../../src/posts/**/*.md');
     const postsList = Object.values(posts);
     let postsMeta = postsList
       .map((post) => {
@@ -42,28 +42,23 @@
   export let posts;
   export let tags;
   export let tagFilter;
+  import BlogPost from '$lib/BlogPost.svelte';
 </script>
 
 <svelte:head>
   <title>Blog Posts</title>
 </svelte:head>
 
-<div class="flex">
+<div class="flex justify-between">
   <div class="mr-16">
-    <h2>Blog Posts</h2>
+    <h2 class="text-3xl">Blog</h2>
+    <h3 class="text-base mt-4">I write about Excel, Javascript, accounting systems, and more!</h3>
     <hr class="border-0 bg-zinc-800 h-px" />
-
-    <ul class="mt-2">
-      {#each posts as post}
-        <li>
-          <a href={`/blog/${post.slug}`} class="font-bold underline">{post.title}</a>
-          <p>{post.summary}</p>
-          <p class="date">{new Date(post.date).toDateString()}</p>
-        </li>
-      {/each}
-    </ul>
+    {#each posts as post}
+      <BlogPost {post} />
+    {/each}
   </div>
-  <div class="justify-self-end">
+  <div class="mt-12">
     <h2>Tags</h2>
     <hr class="border-0 bg-zinc-800 h-px" />
     <ul class="mt-2">
@@ -78,9 +73,3 @@
     </ul>
   </div>
 </div>
-
-<style>
-  p.date {
-    font-style: italic;
-  }
-</style>

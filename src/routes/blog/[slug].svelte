@@ -1,7 +1,7 @@
 <script context="module">
   export async function load({ page }) {
     try {
-      const Post = await import(`../../posts/${page.params.slug}.md`);
+      const Post = await import(`../../posts/${page.params.slug}/${page.params.slug}.md`);
       console.log(Post.metadata.title);
 
       return {
@@ -29,6 +29,3 @@
 </svelte:head>
 
 <Post />
-
-<style>
-</style>

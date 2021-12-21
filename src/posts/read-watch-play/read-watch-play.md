@@ -2,9 +2,10 @@
 id: 4
 date: 2021-12-21
 title: Read, Watch & Play List
-slug: read-watch-play-list
-summary: A list of books I've read, movies/shows I've watched, and games I've played that I recommend
-image:
+slug: read-watch-play
+summary: A list of books I've read, movies/shows I've watched, and games I've played.
+image: './src/posts/read-watch-play/read-watch-game.jpg'
+readTime: 5 min
 updatedDate: 2021-12-19
 tags:
   - Media

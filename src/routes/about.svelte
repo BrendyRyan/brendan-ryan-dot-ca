@@ -60,8 +60,8 @@
     together, gardening, and playing with our two cats, Luna & Loki.
   </p>
   <p>
-    I periodically update my <a href="/blog/read-watch-play-list" class="font-bold underline">read, watch & play list</a
-    > with my favs. Check it out if you like.
+    I periodically update my <a href="/blog/read-watch-play" class="font-bold underline">read, watch & play</a> list with
+    my favs. Check it out if you like.
   </p>
   <h2 class="mt-8 text-2xl">Want to get in contact?</h2>
   <p>

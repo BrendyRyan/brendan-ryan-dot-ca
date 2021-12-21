@@ -1,3 +1,28 @@
+<script context="module">
+  export async function load() {
+    //get all blog posts, map over the list and return the metadata for each one.
+    const posts = import.meta.globEager('../../src/posts/**/*.md');
+    const postsList = Object.values(posts);
+    let postsMeta = postsList
+      .map((post) => {
+        return post.metadata;
+      })
+      .sort((a, b) => (a.id > b.id ? -1 : b.id > a.id ? 1 : 0))
+      .splice(0, 3);
+
+    return {
+      props: {
+        posts: postsMeta,
+      },
+    };
+  }
+</script>
+
+<script>
+  export let posts;
+  import BlogPost from '$lib/BlogPost.svelte';
+</script>
+
 <svelte:head>
   <title>BrendanRyan.ca</title>
 </svelte:head>
@@ -9,11 +34,9 @@
     where I blog about projects I am working on and useful things I've learned.
   </p>
   <h2 class="mt-8 text-2xl">Most recent blog posts</h2>
-  <ul>
-    <li>About Me</li>
-    <li>Learning to code</li>
-    <li>Tracking personal finance in Excel</li>
-  </ul>
+  {#each posts as post}
+    <BlogPost {post} />
+  {/each}
   <h2 class="mt-8 text-2xl">Interesting projects</h2>
   <ul>
     <li>Upload CSV into database</li>

@@ -4,7 +4,8 @@ date: 2021-12-19
 title: My learning to code journey
 slug: learning-to-code
 summary: A brief summary of the random walk I took in learning to code
-image:
+image: './src/posts/learning-to-code/learning-code.png'
+readTime: 4 min
 updatedDate: 2021-12-19
 tags:
   - Coding

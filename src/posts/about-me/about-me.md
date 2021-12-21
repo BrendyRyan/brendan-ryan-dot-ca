@@ -4,7 +4,8 @@ date: 2021-12-13
 title: About Me
 slug: about-me
 summary: A little about myself
-image:
+image: './src/posts/about-me/BR-img.jpg'
+readTime: 5 min
 updatedDate: 2021-12-19
 tags:
   - About Me
@@ -26,7 +27,7 @@ My name is Brendan Ryan. I am an accountant from Ontario Canada. I've been inter
 
 ## Where I'm at
 
-![Dunning-Kruger effect charge of skill level over time](/dunning-kruger-effect.png)
+![Dunning-Kruger effect charge of skill level over time](../src/posts/about-me/dunning-kruger-effect.png)
 
 You may have seen the above graph of how much you _think_ you know versus how much you actually know. I find it interesting to consider where I am in respect to how much there is to know of a given subject. For interest, it's called the **Dunning-Kruger Effect**. I try to resist the urge to consider myself an expert after learning something for only a short amount of time. Competence takes time.
 

@@ -4,6 +4,7 @@ date: 2021-12-19
 title: Tracking my personal finances in Excel
 slug: excel-personal-finance
 summary: A brief overview of how I track my personal finances in Excel.
+image:
 updatedDate: 2021-12-19
 tags:
   - Excel

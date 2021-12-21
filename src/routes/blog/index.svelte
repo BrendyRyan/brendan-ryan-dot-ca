@@ -5,16 +5,19 @@
     //get all blog posts, map over the list and return the metadata for each one.
     const posts = import.meta.globEager('../../../src/posts/*.md');
     const postsList = Object.values(posts);
-    let postsMeta = postsList.map((post) => {
-      return post.metadata;
-    });
+    let postsMeta = postsList
+      .map((post) => {
+        return post.metadata;
+      })
+      .sort((a, b) => (a.id > b.id ? 1 : b.id > a.id ? -1 : 0));
 
     // get a flat array of tags from each blog post
     const tagsList = postsMeta
       .map((tag) => {
         return tag.tags;
       })
-      .flat();
+      .flat()
+      .sort();
     // get just unique tags
     const tags = [...new Set(tagsList)];
 
@@ -29,6 +32,7 @@
       props: {
         posts: postsMeta,
         tags: tags,
+        tagFilter: tagFilter,
       },
     };
   }
@@ -37,31 +41,37 @@
 <script>
   export let posts;
   export let tags;
+  export let tagFilter;
 </script>
 
 <svelte:head>
   <title>Blog Posts</title>
 </svelte:head>
 
-<h1>Blog Posts</h1>
-<hr class="border-0 bg-black text-black h-px" />
+<div class="flex">
+  <div class="mr-16">
+    <h2>Blog Posts</h2>
+    <hr class="border-0 bg-zinc-800 h-px" />
 
-<div class="grid">
-  <ul class="item-a">
-    {#each posts as post}
-      <li>
-        <a href={`/blog/${post.slug}`}>{post.title}</a>
-        <p>{post.summary}</p>
-        <p class="date">{new Date(post.date).toDateString()}</p>
-      </li>
-    {/each}
-  </ul>
-  <div class="item-b">
-    <h2>Tags</h2>
-    <ul>
-      <li><a href="/blog">#All posts</a></li>
-      {#each tags as tag}
+    <ul class="mt-2">
+      {#each posts as post}
         <li>
+          <a href={`/blog/${post.slug}`} class="font-bold underline">{post.title}</a>
+          <p>{post.summary}</p>
+          <p class="date">{new Date(post.date).toDateString()}</p>
+        </li>
+      {/each}
+    </ul>
+  </div>
+  <div class="justify-self-end">
+    <h2>Tags</h2>
+    <hr class="border-0 bg-zinc-800 h-px" />
+    <ul class="mt-2">
+      <li class={`rounded p-1 mb-2 w-28 ${tagFilter === '' ? 'font-bold bg-red-200' : 'bg-red-100'} hover:bg-red-200`}>
+        <a href="/blog">#All posts</a>
+      </li>
+      {#each tags as tag}
+        <li class={`rounded p-1 mb-2 ${tag === tagFilter ? 'font-bold bg-red-200' : 'bg-red-100'} hover:bg-red-200`}>
           <a href={`/blog?tag=${tag}`}>#{tag}</a>
         </li>
       {/each}
@@ -70,21 +80,6 @@
 </div>
 
 <style>
-  .grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-  .item-a {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-  a {
-    text-decoration: underline;
-    font-weight: bold;
-  }
-  li {
-    margin-bottom: 0.5rem;
-  }
   p.date {
     font-style: italic;
   }

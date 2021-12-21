@@ -2,21 +2,18 @@
   import { page } from '$app/stores';
   const routes = [
     { href: '/', name: 'Home' },
+    { href: '/about', name: 'About Me' },
     { href: '/blog', name: 'Blog' },
     { href: '/projects', name: 'Projects' },
   ];
 </script>
 
-<header class="bg-white">
-  <nav class="h-16 border-b-2 border-black">
+<header class="bg-white sticky top-0">
+  <nav class="h-16 shadow">
     <div class="container mx-auto flex">
       <ul class="flex justify-center">
         {#each routes as route}
-          <li
-            class={`m-4 hover:font-bold hover:text-blue-600 ${
-              route.href === $page.path ? 'text-blue-600 font-bold underline' : 'text-black'
-            }`}
-          >
+          <li class={`m-5 hover:font-bold ${route.href === $page.path ? 'font-bold active' : 'text-black'}`}>
             <a href={route.href}>{route.name}</a>
           </li>
         {/each}
@@ -42,3 +39,9 @@
     </div>
   </nav>
 </header>
+
+<style>
+  .active {
+    box-shadow: 0 2px 0 red;
+  }
+</style>

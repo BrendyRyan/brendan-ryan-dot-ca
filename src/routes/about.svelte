@@ -2,7 +2,7 @@
   <title>About Me</title>
 </svelte:head>
 
-<div>
+<div class="max-w-prose mx-auto">
   <div class="flex items-center">
     <h1 class="font-bold text-3xl col-span-10">Hello there, from this guy &rarr;</h1>
     <img src="/BR-cropped.jpg" alt="Brendan Ryan" class="h-36 max-w-xl rounded-full ml-4" />
@@ -12,8 +12,8 @@
   <p>I am learning to code to one day create better tools for accountants like me.</p>
   <h2 class="text-2xl mt-8">My story & how I learned to code</h2>
   <p class="mt-2">
-    I wrote about myself in my first ever <a href="/blog/about-me" class="font-bold underline">blog post.</a>
-    Check it along with any of my other posts if you're interested. I like to write about Excel, Dynamics 365, and other
+    I wrote about <a href="/blog/about-me" class="font-bold underline">myself</a> in my first ever blog post. Check it
+    out along with any of my other posts if you're interested. I like to write about Excel, Dynamics 365, and other
     technologies and/or projects I am learning about or working on. Check out my
     <a href="/blog/learning-to-code" class="font-bold underline">learning to code</a> post to see the path I took to get
     to where I am now.
@@ -47,8 +47,8 @@
   </div>
   <h2 class="mt-8 text-2xl">My preferred tech stack (atm)</h2>
   <p>
-    Most recently I've become a big fan of SvelteKit & Tailwind CSS on the frontend, and Express & Prisma on the
-    backend. For my next big project I want to try Keystone JS.
+    Most recently I've become a fan of SvelteKit & Tailwind CSS on the frontend, and Express & Prisma on the backend.
+    For my next big project I want to try Keystone JS.
   </p>
   <p>
     I also want to try creating tools for Excel using the Excel-Javascript API. I think this could be a fun project that
@@ -56,8 +56,8 @@
   </p>
   <h2 class="mt-8 text-2xl">Non-tech stuff</h2>
   <p>
-    I enjoy reading and video games, especially Overcooked with my wonderful wife, Katie. We enjoy going on hikes
-    together, gardening, and playing with our two cats, Luna & Loki.
+    I enjoy reading and video games, especially Overcooked with my spouse, Katie. We enjoy going on hikes together,
+    gardening, and playing with our two cats, Luna & Loki.
   </p>
   <p>
     I periodically update my <a href="/blog/read-watch-play" class="font-bold underline">read, watch & play</a> list with

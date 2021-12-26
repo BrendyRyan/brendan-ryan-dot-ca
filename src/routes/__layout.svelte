@@ -1,11 +1,11 @@
 <script>
   import '../app.css';
-  import Footer from '$lib/Footer.svelte';
-  import Header from '$lib/Header.svelte';
+  import Footer from '$lib/components/Footer.svelte';
+  import Header from '$lib/components/Header.svelte';
 </script>
 
 <div class="background">
-  <div class="h-screen flex flex-col justify-between text-zinc-800">
+  <div class="h-screen flex flex-col justify-between text-zinc-800 pt-16">
     <Header />
     <main class="container mx-auto flex-grow pt-8 text-lg"><slot /></main>
     <Footer />

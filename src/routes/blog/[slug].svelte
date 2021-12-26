@@ -2,8 +2,6 @@
   export async function load({ page }) {
     try {
       const Post = await import(`../../posts/${page.params.slug}/${page.params.slug}.md`);
-      console.log(Post.metadata.title);
-
       return {
         props: {
           Post: Post.default,
@@ -28,4 +26,7 @@
   <title>{Title}</title>
 </svelte:head>
 
-<Post />
+<article class="mx-auto prose prose-zinc dark:prose-invert">
+  <!-- makes it reactive -->
+  <svelte:component this={Post} />
+</article>

@@ -1,12 +1,12 @@
 ---
 id: 1
-date: 2021-12-13
+date: 2021-12-31
 title: About Me
 slug: about-me
-summary: A little about myself
-image: './src/posts/about-me/BR-img.jpg'
+summary: A little about myself, why I wanted to learn to code, and what my interests are.
+image: './src/lib/posts/about-me/BR-img.jpg'
 readTime: 5 min
-updatedDate: 2021-12-19
+updatedDate: 2021-12-31
 tags:
   - About Me
 ---
@@ -23,11 +23,11 @@ This is my first blog post.
 
 My name is Brendan Ryan. I am an accountant from Ontario Canada. I've been interested in web development for some time and finally feel confident enough to make my own website and publish some projects I have done while learning to code.
 
-![Brendan Ryan](/BR-cropped.jpg)
+<img src='../src/lib/posts/about-me/BR-img.jpg' width="200" alt="Brendan Ryan" class="rounded-full" title="Brendan Ryan">
 
 ## Where I'm at
 
-![Dunning-Kruger effect charge of skill level over time](../src/posts/about-me/dunning-kruger-effect.png)
+![Dunning-Kruger effect charge of skill level over time](../src/lib/posts/about-me/dunning-kruger-effect.png 'Dunning-Kruger effect')
 
 You may have seen the above graph of how much you _think_ you know versus how much you actually know. I find it interesting to consider where I am in respect to how much there is to know of a given subject. For interest, it's called the **Dunning-Kruger Effect**. I try to resist the urge to consider myself an expert after learning something for only a short amount of time. Competence takes time.
 

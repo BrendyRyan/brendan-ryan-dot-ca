@@ -2,7 +2,7 @@
   <title>About Me</title>
 </svelte:head>
 
-<div class="max-w-prose mx-auto">
+<div class="max-w-5xl mx-auto">
   <div class="flex items-center">
     <h1 class="font-bold text-3xl col-span-10">Hello there, from this guy &rarr;</h1>
     <img src="/BR-cropped.jpg" alt="Brendan Ryan" class="h-36 max-w-xl rounded-full ml-4" />
@@ -20,7 +20,7 @@
   </p>
   <h2 class="text-2xl mt-8">Where my skills are at & how much I have to Google...</h2>
   <div class="grid grid-cols-3 gap-4 mt-2">
-    <div class="bg-green-200 rounded-lg p-2">
+    <div class="bg-green-200 rounded-lg p-2 shadow">
       <h3 class="text-base">Advanced &rarr; 10% Google</h3>
       <ul class="list-disc ml-5 text-base">
         <li>Excel</li>
@@ -28,7 +28,7 @@
         <li>SQL</li>
       </ul>
     </div>
-    <div class="bg-yellow-200 rounded-lg p-2">
+    <div class="bg-yellow-200 rounded-lg p-2 shadow">
       <h3 class="text-base">Intermediate &rarr; 50% Google</h3>
       <ul class="list-disc ml-5 text-base">
         <li>Power Apps & Automate</li>
@@ -36,7 +36,7 @@
         <li>Javascript & JS Frameworks</li>
       </ul>
     </div>
-    <div class="bg-red-200 rounded-lg p-2">
+    <div class="bg-red-200 rounded-lg p-2 shadow">
       <h3 class="text-base">Beginner &rarr; 90% Google</h3>
       <ul class="list-disc ml-5 text-base">
         <li>VBA</li>

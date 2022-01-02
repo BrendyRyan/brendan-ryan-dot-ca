@@ -7,7 +7,7 @@
 <div class="background">
   <div class="h-screen flex flex-col justify-between text-zinc-800 pt-16">
     <Header />
-    <main class="container mx-auto flex-grow pt-8 text-lg"><slot /></main>
+    <main class="container mx-auto flex-grow pt-4 text-lg"><slot /></main>
     <Footer />
   </div>
 </div>

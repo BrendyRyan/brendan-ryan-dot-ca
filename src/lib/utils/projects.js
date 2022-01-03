@@ -7,18 +7,18 @@ export const projects = [
     slug: 'upload-a-csv',
     summary: 'Scan folder for an xml filename, upload to server, convert xml to JSON, and insert into database.',
     image: './src/lib/posts/about-me/BR-img.jpg',
-    tags: ['SQL', 'Upload', 'Timer'],
+    tags: ['SQL', 'ExpressJS', 'NextJS'],
   },
   {
     id: 2,
     date: '12/31/2021',
     updatedDate: '12/31/2021',
-    title: 'Mini CRM (customer resource management) tool to track sales calls by rep',
+    title: 'Mini CRM tool to track customer sales calls',
     slug: 'mini-crm',
     summary:
       'Track sales calls made to customers, save to database, obtain basic reporting, export data to excel, and email it.',
     image: './src/lib/posts/about-me/BR-img.jpg',
-    tags: ['SQL', 'Forms', 'emailing'],
+    tags: ['SQL', 'Formik', 'NextJS', 'Styled Components'],
   },
   {
     id: 3,
@@ -26,9 +26,9 @@ export const projects = [
     updatedDate: '12/31/2021',
     title: 'SvelteKit Pokedex',
     slug: 'sveltekit-pokedex',
-    summary: 'Code along with James Q Quick on creating a pokedex in SvelteKit',
+    summary: 'Code along with James Q Quick on creating a Pokedex in SvelteKit',
     image: './src/lib/posts/about-me/BR-img.jpg',
-    tags: ['Svelte', 'API', 'Javascript'],
+    tags: ['SvelteKit', 'Tailwind CSS', 'APIs', 'Javascript'],
   },
   {
     id: 4,
@@ -39,6 +39,6 @@ export const projects = [
     summary:
       'Original version of mini-crm built using Microsoft Power Apps, Power Automate, Sharepoint, and SQL to track sales calls made to customers, save to database, obtain basic reporting, export data to excel, and email it.',
     image: './src/lib/posts/about-me/BR-img.jpg',
-    tags: ['SQL', 'Forms', 'MS Power Platform'],
+    tags: ['SQL', 'Mobile App', 'MS Power Platform'],
   },
 ];

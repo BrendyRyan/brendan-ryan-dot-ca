@@ -3,7 +3,7 @@ id: 4
 date: 2021-12-21
 title: Read, watch & play list
 slug: read-watch-play
-summary: A list of books I've read, movies/shows I've watched, and games I've played.
+summary: A list of books, film, games and podcasts I've enjoyed.
 image: './src/lib/posts/read-watch-play/read-watch-game.jpg'
 readTime: 5 min
 updatedDate: 2021-12-19

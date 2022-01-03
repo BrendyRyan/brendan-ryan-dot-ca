@@ -1,7 +1,7 @@
 <script context="module">
   export async function load({ page }) {
     try {
-      const Post = await import(`../../posts/${page.params.slug}/${page.params.slug}.md`);
+      const Post = await import(`../../lib/posts/${page.params.slug}/${page.params.slug}.md`);
       return {
         props: {
           Post: Post.default,
@@ -26,7 +26,11 @@
   <title>{Title}</title>
 </svelte:head>
 
-<article class="mx-auto prose prose-zinc dark:prose-invert">
-  <!-- makes it reactive -->
-  <svelte:component this={Post} />
-</article>
+<div class="flex justify-center">
+  <div class="inline-flex bg-white p-20 shadow-xl">
+    <article class="prose prose-zinc dark:prose-invert">
+      <!-- makes it reactive -->
+      <svelte:component this={Post} />
+    </article>
+  </div>
+</div>

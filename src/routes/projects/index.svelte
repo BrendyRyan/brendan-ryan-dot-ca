@@ -48,14 +48,14 @@
   <title>Blog Posts</title>
 </svelte:head>
 
+<h2 class="text-3xl bg-white mx-auto shadow-lg p-4 rounded border">Projects</h2>
 <div class="flex justify-between">
   <div>
-    <h2 class="text-3xl">Projects</h2>
-    <h3 class="text-base mt-4">Projects that I've worked on.</h3>
+    <h3 class="mt-4">A list of projects that I've worked on.</h3>
   </div>
   <div class="hidden md:flex md:w-24">
     <div class="self-end">
-      <h3 class="text-base">Tech Used</h3>
+      <h3>Tech Used</h3>
     </div>
   </div>
   <!-- mobile menu -->
@@ -67,7 +67,7 @@
 <!-- Repeat structure of above so blogs and tags fall under the right column -->
 <div class="flex justify-between">
   <!-- Blog posts -->
-  <section class="grid gap-4 grid-cols-1 mt-2 xl:grid-cols-2">
+  <section class="grid gap-4 grid-cols-1 mt-2 lg:grid-cols-2 xl:grid-cols-3">
     {#each projectsListing as project}
       <Project {project} />
     {/each}

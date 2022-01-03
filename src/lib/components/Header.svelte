@@ -6,6 +6,7 @@
     { href: '/about', name: 'About Me' },
     { href: '/blog', name: 'Blog' },
     { href: '/projects', name: 'Projects' },
+    { href: '/credit', name: 'Credit' },
   ];
 
   onMount(() => {
@@ -20,7 +21,7 @@
   });
 </script>
 
-<header class="bg-white top-0 fixed inset-x-0">
+<header class="bg-white top-0 sticky inset-x-0">
   <nav class="h-16 shadow">
     <div class="container mx-auto flex">
       <!-- Mobile Menu Button -->
@@ -70,7 +71,7 @@
     </div>
   </nav>
   <!-- Mobile menu -->
-  <div class="hidden mobile-menu absolute shadow-lg bg-white">
+  <div class="hidden mobile-menu absolute shadow-lg bg-white w-40">
     <ul class="text-center">
       {#each routes as route}
         <li class={`m-5 hover:font-bold ${route.href === $page.path ? 'font-bold active' : 'text-black'}`}>
